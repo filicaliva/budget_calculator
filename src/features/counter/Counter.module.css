@@ -1,21 +1,21 @@
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
   position: relative;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .value {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20%;
+  bottom: 30%;
 }
 
 .account {
   color: #27ae60;
-  font-size: 48px;
-  width: 30%;
+  font-size: 50px;
+  width: 50%;
   font-family: 'Roboto';
 }
 
@@ -26,15 +26,53 @@
 .expenses {
   margin-top: 5px;
   font-size: 28px;
-  color: #EB5757;
+  color: grey;
 }
 
 .categories_container {
   display: -ms-grid;
   display: grid;
+  margin: auto;
   grid-gap: 75px;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  margin: 0 20%;
-  margin-top: 60px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 550px) {
+  .categories_container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  .account {
+    font-size: 45px;
+    width: 50%;
+  }
+  .container {
+    margin-top: 20px;
+    max-width: 450px;
+  }
+  .value {
+    bottom: 28%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .account {
+    font-size: 40px;
+    width: 50%;
+  }
+  .expenses {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  .value {
+    bottom: 30%;
+  }
+  .container {
+    margin-top: 20px;
+  }
 }
