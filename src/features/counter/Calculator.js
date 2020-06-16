@@ -9,7 +9,7 @@ import {
   setData,
   selectCutoutPercentage
 } from './counterSlice';
-import styles from './Counter.module.css';
+import styles from './Calculator.module.css';
 import { Item } from './item/Item';
 
 import eat from './symbols/food.png'
